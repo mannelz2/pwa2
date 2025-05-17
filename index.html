@@ -10,58 +10,19 @@
     <meta name="theme-color" content="#10b981">
 
     <!-- OneSignal SDK -->
-    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-    <script>
-      window.OneSignalDeferred = window.OneSignalDeferred || [];
-      OneSignalDeferred.push(async function(OneSignal) {
-        await OneSignal.init({
-          appId: "dc1f8b35-f1a9-4a8b-9f7e-5ac6a1e1688b",
-          safari_web_id: "web.onesignal.auto.162dc776-ab2c-42c2-8206-1135116280d4",
-          autoResubscribe: false,
-          notifyButton: {
-            enable: true,
-            size: 'medium',
-            theme: 'default',
-            position: 'bottom-right',
-            offset: {
-              bottom: '20px',
-              right: '20px'
-            },
-            prenotify: true,
-            showCredit: false,
-            text: {
-              'tip.state.unsubscribed': 'Receba notificações',
-              'tip.state.subscribed': 'Você está inscrito',
-              'tip.state.blocked': 'Você bloqueou as notificações',
-              'message.prenotify': 'Clique para se inscrever',
-              'message.action.subscribed': 'Obrigado por se inscrever!',
-              'message.action.resubscribed': 'Você está inscrito para notificações',
-              'message.action.unsubscribed': 'Você não receberá mais notificações',
-              'dialog.main.title': 'Gerenciar notificações',
-              'dialog.main.button.subscribe': 'INSCREVER',
-              'dialog.main.button.unsubscribe': 'CANCELAR INSCRIÇÃO',
-              'dialog.blocked.title': 'Desbloquear notificações',
-              'dialog.blocked.message': 'Siga estas instruções para permitir notificações:'
-            }
-          },
-          promptOptions: {
-            slidedown: {
-              prompts: [
-                {
-                  type: "push",
-                  autoPrompt: false,
-                  text: {
-                    actionMessage: "Deseja receber notificações sobre novos bônus e promoções?",
-                    acceptButton: "Permitir",
-                    cancelButton: "Cancelar"
-                  }
-                }
-              ]
-            }
-          }
-        });
-      });
-    </script>
+   <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "dc1f8b35-f1a9-4a8b-9f7e-5ac6a1e1688b",
+      safari_web_id: "web.onesignal.auto.162dc776-ab2c-42c2-8206-1135116280d4",
+      notifyButton: {
+        enable: true,
+      },
+    });
+  });
+</script>
     <!-- End OneSignal SDK -->
 
     <!-- Meta Pixel Code -->
